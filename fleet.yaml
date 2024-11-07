@@ -1,0 +1,12 @@
+defaultNamespace: coder
+helm:
+  repo: "https://helm.coder.com/v2"
+  chart: coder
+  releaseName: coder
+  values:
+    - values.yaml
+options:
+    atomic: true
+    wait: true
+  set:
+    coder.ingress.host: ${CODER_HOSTNAME}

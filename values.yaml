@@ -1,0 +1,13 @@
+coder:
+  env:
+    - name: CODER_ACCESS_URL
+      value: "${CODER_HOSTNAME}"
+  ingress:
+    enabled: true
+    className: "traefik"
+    host: ${CODER_HOSTNAME}
+    wildcardHost: "*.${CODER_HOSTNAME}"
+    tls:
+      enabled: true
+      secretName: "coder-cert" 
+      wildcardSecretName: "coder-wildcard-cert"
