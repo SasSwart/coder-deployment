@@ -9,4 +9,6 @@ options:
     atomic: true
     wait: true
   set:
+    coder.env[0].value: "{{ .Values.global.labels.coder-host }}"     # Substitute CODER_ACCESS_URL
     coder.ingress.host: "{{ .Values.global.labels.coder-host }}"
+    coder.ingress.wildcardHost: "*.{{ .Values.global.labels.coder-host }}"  # Substitute wildcardHost
