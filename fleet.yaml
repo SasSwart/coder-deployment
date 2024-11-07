@@ -9,4 +9,4 @@ options:
     atomic: true
     wait: true
   set:
-    coder.ingress.host: ${CODER_HOSTNAME}
+    coder.ingress.host: "{{ .Values.global.labels.coder-host }}"
