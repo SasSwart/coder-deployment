@@ -7,6 +7,6 @@ coder:
     className: "traefik"
     wildcardHost: ""
     tls:
-      enabled: true
+      enable: true
       secretName: "coder-cert" 
       wildcardSecretName: "coder-wildcard-cert"
